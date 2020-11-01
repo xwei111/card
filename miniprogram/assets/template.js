@@ -211,7 +211,7 @@ export const templates = [{
       left: '240rpx',
       top: '300rpx',
     }]
-  }, , {
+  }, {
     id: getuid(),
     type: 'image',
     url: '/images/hui.png',
