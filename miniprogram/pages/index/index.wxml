@@ -1,0 +1,12 @@
+<view class="custom_card">
+  <view class="custom_self">
+    <view class="custom_button">
+      <view class='custom_self_text' bindtap="customHandle" >创建空白模板</view>
+    </view>
+  </view>
+  <view wx:for="{{templates}}" wx:key="id" id="{{item.id}}" class="template_box" >
+    <painter dancePalette="{{item}}" bind:imgOK="onImgOK" id="{{item.id}}" />
+    <cover-view class="template_box_mark" bindtap="selectHandle"
+    data-item="{{item}}" id="{{item.id}}"></cover-view>
+  </view>
+</view>

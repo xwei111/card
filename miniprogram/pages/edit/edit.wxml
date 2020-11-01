@@ -1,0 +1,42 @@
+<!--miniprogram/pages/edit/edit.wxml-->
+<view class="edit_box">
+	<scroll-view class="edit_main" scroll-x="{{false}}" scroll-y="{{false}}">
+		<painter id="painter" style="{{customStyle}}" dancePalette="{{dancePaletteData}}" bind:viewClicked="viewClicked" bind:touchEnd="touchEnd" customActionStyle="{{customActionStyle}}" widthPixels="1500" />
+		<painter id="painter1111" palette="{{paletteData}}"  bind:imgOK="onImgOK" bind:imgErr="imgErr" widthPixels="1500" />
+		<cover-image wx:if="{{isShowMove}}" class="move" style="{{moveStyl}}" src="/images/move.png" bind:touchstart="touchstart" bind:touchmove="touchmove" bind:touchend="touchend"/>
+	</scroll-view>
+	<view class="edit_btns" wx:if="{{type == 'cvs'}}">
+		<picker bindchange="addHandle" range="{{addArr}}">
+			<view class="edit_select_ig">
+				添加元素
+			</view>
+		</picker>
+		<picker bindchange="saveHandle" range="{{saveArr}}">
+			<view class="edit_select_ig">
+				保存
+			</view>
+		</picker>
+    <view class="edit_select_ig" bindtap="showMoveIg">{{isShowMove ? '隐藏' : '显示'}}画布移动图标</view>
+		<view class="edit_select_ig" bindtap="resetPos">画布正位</view>
+		<view class="edit_select_ig" bindtap="saveIphone" bindtap="previewHandle">预览</view>
+	</view>
+	<view class="edit_btns" wx:if="{{type != 'cvs'}}">
+		<view class="edit_select_ig" bindtap="deleteChild">移除</view>
+		<view class="edit_select_ig" bindtap="backTemHandle">回到主模板</view>
+	</view>
+	<view class="edit_info">
+		<view class="edit_info_animate">
+			您可以点击图片、文字或矩形对元素进行修改，点击卡片空白区域则可以设置卡片属性
+		</view>
+	</view>
+	<scroll-view class="edit_scroll" scroll-x="{{false}}" scroll-y="{{true}}">
+		<view wx:for="{{attrs}}" wx:key="key" data-item="{{item}}" class="edit_attrs">
+			<text class="edit_text">{{item.label}}</text>
+			<input class="edit_inputs" placeholder="{{item.placeholder ? item.placeholder : '请输入' }}" type="{{item.type}}" value="{{item.value}}" bindinput="inputChange" data-key="{{item.key}}" data-type="{{item.type}}" />
+			<view wx:if="{{item.com}}" class="edit_select_ig edit_slect_ig" bindtap="selectBg">选择图片</view>
+		</view>
+	</scroll-view>
+	<cover-view wx:if="{{previewImg}}" class="preview_box" bindtap="hiddenHandle">
+		<cover-image class="preview_ig" style="{{preStl}}"  src="{{previewImg}}" bind:touchstart="pretouchstart" bind:touchmove="pretouchmove" bind:touchend="pretouchend" />
+	</cover-view>
+</view>

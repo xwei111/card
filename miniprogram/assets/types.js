@@ -1,0 +1,52 @@
+export const types = {
+  cvs: [
+    { key: 'width', label: '宽', type: 'number', placeholder: '例： 100'   },
+    { key: 'height', label: '高', type: 'number', placeholder: '例： 100'  },
+    { key: 'background', label: '背景色(图片)', com: 'img', placeholder: '例： #f00或a.png' }
+  ],
+  image: [
+    { key: 'width', label: '宽', type: 'number', placeholder: '例： 100 或 auto ' },
+    { key: 'height', label: '高', type: 'number', placeholder: '例： 100 或 auto' },
+    { key: 'top', label: '距顶部', type: 'number', placeholder: '例： 100' },
+    { key: 'left', label: '距左侧', type: 'number', placeholder: '例： 100' },
+    { key: 'borderWidth', label: '边框', type: 'number', placeholder: '例： 1' },
+    { key: 'borderStyle', label: '边框样式', placeholder: '支持dashed、dotted、solid' },
+    { key: 'borderColor', label: '边框颜色', placeholder: '例： #f00或red' },
+    { key: 'borderRadius', label: '圆角', type: 'number', placeholder: '例： 8' },
+    { key: 'rotate', label: '旋转度数', placeholder: '例： 30' },
+    { key: 'shadow', label: '阴影', placeholder: '例：0rpx 0rpx 5rpx #333' }
+  ],
+  text: [
+    { key: 'text', label: '文本', placeholder: '请输入' },
+    { key: 'width', label: '宽度', type: 'number', placeholder: '例： 100' },
+    { key: 'top', label: '距顶部', type: 'number', placeholder: '例： 100' },
+    { key: 'left', label: '距左侧', type: 'number', placeholder: '例： 100' },
+    { key: 'fontSize', label: '字体大小', type: 'number', placeholder: '例： 30' },
+    { key: 'color', label: '颜色', placeholder: '例： #f00或red' },
+    { key: 'maxLines', label: '最大行数', type: 'number', placeholder: '例： 1, 和宽度关联' },
+    { key: 'fontWeight', label: '字体粗细', placeholder: '例：bold,仅支持normal, bold' },
+    { key: 'lineHeight', label: '行高', type: 'number', placeholder: '例： 1' },
+    { key: 'background', label: '背景色', placeholder: '例： #f00或red' },
+    { key: 'padding', label: 'padding', placeholder: '例： 10rpx或10rpx 20rpx或1rpx 2rpx 3rpx 4rpx' },
+    { key: 'textAlign', label: '对齐方式', placeholder: '例：left, 支持left, center, right' },
+    { key: 'borderWidth', label: '边框', type: 'number', placeholder: '例： 1' },
+    { key: 'borderStyle', label: '边框样式', placeholder: '支持dashed、dotted、solid' },
+    { key: 'borderColor', label: '边框颜色', placeholder: '例： #f00或red' },
+    { key: 'borderRadius', label: '圆角', type: 'number', placeholder: '例： 8' },
+    { key: 'rotate', label: '旋转度数', placeholder: '例： 30' },
+    { key: 'shadow', label: '阴影', placeholder: '例：0rpx 0rpx 5rpx #333' },
+  ],
+  rect: [
+    { key: 'width', label: '宽', type: 'number', placeholder: '例： 100 或 auto ' },
+    { key: 'height', label: '高', type: 'number', placeholder: '例： 100 或 auto' },
+    { key: 'top', label: '距顶部', type: 'number', placeholder: '例： 100' },
+    { key: 'left', label: '距左侧', type: 'number', placeholder: '例： 100' },
+    { key: 'color', label: '颜色', placeholder: '例： #f00或red' },
+    { key: 'borderWidth', label: '边框', type: 'number', placeholder: '例： 1' },
+    { key: 'borderStyle', label: '边框样式', placeholder: '支持dashed、dotted、solid' },
+    { key: 'borderColor', label: '边框颜色', placeholder: '例： #f00或red' },
+    { key: 'borderRadius', label: '圆角', type: 'number', placeholder: '例： 8' },
+    { key: 'rotate', label: '旋转度数', placeholder: '例： 30' },
+    { key: 'shadow', label: '阴影', placeholder: '例：0rpx 0rpx 5rpx #333' },
+  ]
+}

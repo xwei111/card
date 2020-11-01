@@ -1,0 +1,29 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<view class="mine_box">
+  <view class="mine_info">
+    <view class="mine_info_box">
+      <image class="mine_img" src="{{avatarUrl}}" />
+      <text class="mine_name" >{{nickName}}</text>
+    </view>
+  </view>
+  <view wx:for="{{templates}}" wx:key="id" id="{{item.id}}" class="template_box"
+    data-item="{{item}}">
+    <scroll-view style="width: 660rpx; height: 400rpx;">
+      <painter dancePalette="{{item}}" id="{{item.id}}" />
+    </scroll-view>
+    <cover-view class="{{item.isClick ? 'template_mark_select template_box_mark' : 'template_box_mark'}}" bindtap="selectHandle" data-id="{{item._id}}" data-item="{{item}}">
+      <cover-image class="ig_icon" wx:if="{{item.isClick}}" src="/images/delete.png" catchtap="deleteHandle" data-id="{{item._id}}" />
+      <cover-image class="ig_icon" wx:if="{{item.isClick}}"  src="/images/edit.png" catchtap="editHandle" data-id="{{item._id}}" data-item="{{item}}"/>
+      <cover-image class="ig_icon" wx:if="{{item.isClick}}"  src="/images/download.png" catchtap="downLoadHandle" data-item="{{item}}"/>
+      <cover-image class="ig_icon" wx:if="{{item.isClick}}"  src="/images/share.png" />
+      <cover-view class="share_box" wx:if="{{item.isClick}}">
+        <button id='sendfriend' open-type="share">分享</button>
+      </cover-view>
+    </cover-view>
+  </view>
+  <painter  class="igPainter" palette="{{paletteData}}" bind:imgOK="onImgOK" widthPixels="1500" />
+  <view class="mine_empty" wx:if="{{!templates.length && !loading}}">
+    <view>很遗憾，您还没有作品</view>
+    <view class="toEdit" bindtap="customHandle">去制作</view>
+  </view>
+</view>

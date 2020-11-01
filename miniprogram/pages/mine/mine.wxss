@@ -1,0 +1,71 @@
+/* miniprogram/pages/mine/mine.wxss */
+.mine_box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.mine_info {
+  width: 100%;
+  height: 160rpx;
+  background-color: #eee;
+  padding-bottom: 20rpx;
+  margin-bottom: 20rpx;
+}
+.mine_info_box {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.mine_img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+.mine_name {
+  font-size: 30rpx;
+  color: #333;
+}
+.mine_empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30rpx;
+  padding-top: 100rpx;
+}
+.toEdit {
+  padding-top: 20rpx;
+  color: #1AAD19;
+}
+.template_mark_select {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.ig_icon {
+  height: 70rpx;
+  width: 78rpx;
+  margin: 0 35rpx;
+}
+.share_box {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 50rpx;
+  bottom: 144rpx;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 99999999;
+}
+#sendfriend {
+  height: 100%;
+  width: 100%;
+  padding: 30rpx 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+}
+.igPainter {
+  position: absolute;
+  left: -10000px;
+}
+

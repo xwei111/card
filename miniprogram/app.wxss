@@ -1,0 +1,29 @@
+page {
+  display: flex;
+  background-color: #f7f7f7;
+}
+
+.template_box {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  width: 660rxp;
+  height: 400rpx;
+  overflow: hidden;
+}
+.template_box_mark {
+  position: absolute;
+  width: 660rpx;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -330rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  line-height: 400rpx;
+}
